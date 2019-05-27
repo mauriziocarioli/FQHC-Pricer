@@ -44,7 +44,7 @@
                 <parameters/>
                 <fieldBinding>$gaf2017</fieldBinding>
                 <factType>CalculationHelper</factType>
-                <fieldName>gafs2017rate</fieldName>
+                <fieldName>gafs2017Rate</fieldName>
                 <fieldType>Double</fieldType>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
@@ -56,7 +56,7 @@
                 <parameters/>
                 <fieldBinding>$gaf2018</fieldBinding>
                 <factType>CalculationHelper</factType>
-                <fieldName>gafs2018rate</fieldName>
+                <fieldName>gafs2018Rate</fieldName>
                 <fieldType>Double</fieldType>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
@@ -68,7 +68,7 @@
                 <parameters/>
                 <fieldBinding>$gaf2018rev</fieldBinding>
                 <factType>CalculationHelper</factType>
-                <fieldName>gafs2018revisedrate</fieldName>
+                <fieldName>gafs2018RevisedRate</fieldName>
                 <fieldType>Double</fieldType>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
@@ -80,7 +80,7 @@
                 <parameters/>
                 <fieldBinding>$gaf2019</fieldBinding>
                 <factType>CalculationHelper</factType>
-                <fieldName>gafs2019rate</fieldName>
+                <fieldName>gafs2019Rate</fieldName>
                 <fieldType>Double</fieldType>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
             </constraints>
