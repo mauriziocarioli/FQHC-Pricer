@@ -124,7 +124,7 @@
       <width>100</width>
       <header>Base Rate</header>
       <boundName>$lh</boundName>
-      <factField>baserate</factField>
+      <factField>baseRate</factField>
       <type>Double</type>
       <update>true</update>
     </set-field-col52>
@@ -138,7 +138,7 @@
       <width>100</width>
       <header>Add On Factor</header>
       <boundName>$lh</boundName>
-      <factField>addonfactor</factField>
+      <factField>addonFactor</factField>
       <type>Double</type>
       <update>true</update>
     </set-field-col52>
@@ -152,7 +152,7 @@
       <width>100</width>
       <header>GTA Base Rate</header>
       <boundName>$lh</boundName>
-      <factField>gftbaserate</factField>
+      <factField>gftBaseRate</factField>
       <type>Double</type>
       <update>true</update>
     </set-field-col52>
