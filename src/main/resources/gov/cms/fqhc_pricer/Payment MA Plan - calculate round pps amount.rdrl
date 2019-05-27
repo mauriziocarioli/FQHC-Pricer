@@ -8,11 +8,11 @@ rule "Payment MA Plan - calculate round pps amount" extends "Service Date is Rec
 	when
 		not (StopProcessing( )) 
 		exists (MAPlan( )) 
-		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $AF : addonFactor != null )
+		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
 		$line : Line( line == ( $l ) , paymentIndicator == "13" )
 	then
 		modify( $lh ) {
-				setRoundPpsAmount( $baseRate*$AF*$AF )
+				setRoundPpsAmount( $baseRate*$AF*$addon )
 		}
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
