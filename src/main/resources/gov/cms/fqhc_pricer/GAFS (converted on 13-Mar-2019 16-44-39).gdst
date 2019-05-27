@@ -132,7 +132,7 @@
       <header>Converted from [&apos;2017 FQHC GAFs&apos;]</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>modify($h) { setGafs2017rate(@{param3}) };</text>
+          <text>modify($h) { setgafs2017Rate(@{param3}) };</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -151,7 +151,7 @@
       <header>Converted from [&apos;2018 FQHC GAFs&apos;]</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>modify($h) { setGafs2018rate(@{param4}) };</text>
+          <text>modify($h) { setgafs2018Rate(@{param4}) };</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -170,7 +170,7 @@
       <header>Converted from [&apos;Revided 2018 FQHC GAFs&apos;]</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>modify($h) { setGafs2018revisedrate(@{param5}) };</text>
+          <text>modify($h) { setgafs2018RevisedRate(@{param5}) };</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -189,7 +189,7 @@
       <header>Converted from [&apos;2019 FQHC GAFs&apos;]</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>modify($h) { setGafs2019rate(@{param6}) };</text>
+          <text>modify($h) { setgafs2019Rate(@{param6}) };</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
