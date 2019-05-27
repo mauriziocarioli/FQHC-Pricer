@@ -8,15 +8,15 @@ rule "Payment No MA Plan covered charges less than limit - 2" extends "Service D
 	when
 		not (StopProcessing( )) 
 		NotMAPlan( )
-		$lh : LineCalculationHelper( $AF : adjFactor != null , $baserate : baserate != null , $l : line != null )
-		$line : Line( $coveredcharges : coveredCharges < ( $AF* $baserate ) , line == ( $l ) , compositeAdjFlag == "02" , packagingFlag == "6" , paymentIndicator != "12" )
+		$lh : LineCalculationHelper( $AF : adjFactor != null , $baseRate : baseRate != null , $l : line != null )
+		$line : Line( $coveredCharges : coveredCharges < ( $AF* $baseRate ) , line == ( $l ) , compositeAdjFlag == "02" , packagingFlag == "6" , paymentIndicator != "12" )
 		$claim : Claim( )
 	then
 		modify( $line ) {
-				setLinePayment( $coveredcharges ), 
+				setLinePayment( $coveredCharges ), 
 				setLineCoinsurance( 0.0 ), 
 				setLineReturnCode( "02" ), 
-				setLineMedicareReimbursement( $coveredcharges )
+				setLineMedicareReimbursement( $coveredCharges )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
