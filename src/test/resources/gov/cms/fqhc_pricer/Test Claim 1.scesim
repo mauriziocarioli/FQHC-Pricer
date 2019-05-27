@@ -157,7 +157,8 @@
             <className>gov.cms.fqhc_pricer.Line</className>
           </factIdentifier>
           <className>java.lang.Integer</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>line</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -175,7 +176,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>hcpc</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -193,7 +195,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>description</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -211,7 +214,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>modifier</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -229,7 +233,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.util.Date</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>serviceDate</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -247,7 +252,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>revenueCode</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -265,7 +271,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.Integer</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>totalUnits</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -283,7 +290,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.Integer</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>coveredUnits</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -301,7 +309,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.Double</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>coveredCharges</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -319,7 +328,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>paymentIndicator</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -337,7 +347,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>packagingFlag</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -355,7 +366,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>paymentMethodFlag</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -373,7 +385,8 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>lineItemActionFlag</expressionAlias>
         </FactMapping>
         <FactMapping>
@@ -391,22 +404,259 @@
           </expressionIdentifier>
           <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
           <className>java.lang.String</className>
-          <factAlias>Line</factAlias>
+          <factAlias>Line1
+</factAlias>
           <expressionAlias>compositeAdjFlag</expressionAlias>
         </FactMapping>
         <FactMapping>
-          <expressionElements/>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line2</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>line</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558971898560</name>
+            <type>GIVEN</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1558971898560</name>
+            <className>gov.cms.fqhc_pricer.Line</className>
+          </factIdentifier>
+          <className>java.lang.Integer</className>
+          <factAlias>Line2</factAlias>
+          <expressionAlias>line</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>line</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558971946105</name>
+            <type>GIVEN</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1558971946105</name>
+            <className>gov.cms.fqhc_pricer.Line</className>
+          </factIdentifier>
+          <className>java.lang.Integer</className>
+          <factAlias>Line3</factAlias>
+          <expressionAlias>line</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Claim</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>totalClaimPayment</step>
+            </ExpressionElement>
+          </expressionElements>
           <expressionIdentifier>
             <name>0|2</name>
             <type>EXPECT</type>
           </expressionIdentifier>
-          <factIdentifier>
-            <name>Empty</name>
-            <className>java.lang.Void</className>
-          </factIdentifier>
-          <className>java.lang.Void</className>
-          <factAlias>INSTANCE 2</factAlias>
-          <expressionAlias>PROPERTY 2</expressionAlias>
+          <factIdentifier reference="../../FactMapping[3]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Claim</factAlias>
+          <expressionAlias>totalClaimPayment</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Claim</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>totalMedicareReimbursement</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972057883</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[3]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Claim</factAlias>
+          <expressionAlias>totalMedicareReimbursement</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Claim</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>totalClaimCoinsurance</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972081139</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[3]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Claim</factAlias>
+          <expressionAlias>totalClaimCoinsurance</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Claim</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>claimReturnCode</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972098635</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[3]/factIdentifier"/>
+          <className>java.lang.String</className>
+          <factAlias>Claim</factAlias>
+          <expressionAlias>claimReturnCode</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line1
+</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>linePayment</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972146356</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line1
+</factAlias>
+          <expressionAlias>linePayment</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line1
+</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>lineMedicareReimbursement</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972179637</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line1
+</factAlias>
+          <expressionAlias>lineMedicareReimbursement</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line1
+</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>lineCoinsurance</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972200046</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line1
+</factAlias>
+          <expressionAlias>lineCoinsurance</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line1
+</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>lineAddonPayment</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972218830</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line1
+</factAlias>
+          <expressionAlias>lineAddonPayment</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line1
+</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>lineReturnCode</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972241118</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[9]/factIdentifier"/>
+          <className>java.lang.String</className>
+          <factAlias>Line1
+</factAlias>
+          <expressionAlias>lineReturnCode</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line2</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>linePayment</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972266346</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[23]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line2</factAlias>
+          <expressionAlias>linePayment</expressionAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Line3</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>linePayment</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1558972289413</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier reference="../../FactMapping[24]/factIdentifier"/>
+          <className>java.lang.Double</className>
+          <factAlias>Line3</factAlias>
+          <expressionAlias>linePayment</expressionAlias>
         </FactMapping>
       </factMappings>
       <dmoSession>default</dmoSession>
@@ -418,10 +668,6 @@
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/expressionIdentifier"/>
-          </FactMappingValue>
-          <FactMappingValue>
-            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[23]/factIdentifier"/>
-            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[23]/expressionIdentifier"/>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/factIdentifier"/>
@@ -507,6 +753,58 @@
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[22]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[23]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[23]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[24]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[24]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[25]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[26]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[27]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[28]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[29]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[30]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[31]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[32]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[33]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[23]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[34]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[24]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[35]/expressionIdentifier"/>
           </FactMappingValue>
         </factMappingValues>
         <simulationDescriptor reference="../../../simulationDescriptor"/>
