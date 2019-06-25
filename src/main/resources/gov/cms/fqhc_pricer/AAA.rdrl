@@ -1,0 +1,9 @@
+package gov.cms.fqhc_pricer;
+
+import java.lang.Number;
+
+rule "AAA"
+	dialect "mvel"
+	when
+	then
+end
