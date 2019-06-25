@@ -20,4 +20,5 @@ rule "Payment Total"
 				setTotalMedicareReimbursement( $totalReimbursement ), 
 				setTotalClaimCoinsurance( $totalCoinsurance )
 		}
+		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName());
 end
