@@ -12,12 +12,12 @@ rule "Payment Total"
 			sum($linePayment)) 
 		$totalReimbursement : Double( ) from accumulate ( Line( $lineReimbursement : lineMedicareReimbursement != null ),
 			sum($lineReimbursement)) 
-		$totalAddon : Double( ) from accumulate ( Line( $lineAddon : lineAddonPayment != null ),
-			sum($lineAddon)) 
+		$totalCoinsurance : Double( ) from accumulate ( Line( $lineCoinsurance : lineCoinsurance != null ),
+			sum($lineCoinsurance)) 
 	then
 		modify( $claim ) {
 				setTotalClaimPayment( $totalPayment ), 
 				setTotalMedicareReimbursement( $totalReimbursement ), 
-				setTotalClaimCoinsurance( $totalAddon )
+				setTotalClaimCoinsurance( $totalCoinsurance )
 		}
 end
