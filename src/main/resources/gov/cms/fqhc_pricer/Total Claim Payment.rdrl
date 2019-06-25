@@ -10,14 +10,8 @@ rule "Total Claim Payment"
 		$claim : Claim( )
 		$totalPayment : Double( ) from accumulate ( Line( $linePayment : linePayment != null ),
 			sum($linePayment)) 
-		$totalReimbursement : Double( ) from accumulate ( Line( $lineReimbursement : lineMedicareReimbursement != null ),
-			sum($lineReimbursement)) 
-		$totalCoinsurance : Double( ) from accumulate ( Line( $lineCoinsurance : lineCoinsurance != null ),
-			sum($lineCoinsurance)) 
 	then
 		modify( $claim ) {
-				setTotalClaimPayment( $totalPayment ), 
-				setTotalMedicareReimbursement( $totalReimbursement ), 
-				setTotalClaimCoinsurance( $totalCoinsurance )
+				setTotalClaimPayment( $totalPayment )
 		}
 end
