@@ -5,7 +5,7 @@ import java.lang.Double;
 
 rule "Payment Total"
 	dialect "mvel"
-	salience 1
+	salience 0
 	when
 		$claim : Claim( )
 		$totalPayment : Double( ) from accumulate ( Line( $linePayment : linePayment != null ),
