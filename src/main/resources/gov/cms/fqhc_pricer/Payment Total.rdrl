@@ -15,10 +15,10 @@ rule "Payment Total"
 		$totalCoinsurance : Double( ) from accumulate ( Line( $lineCoinsurance : lineCoinsurance != null ),
 			sum($lineCoinsurance)) 
 	then
+		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName());
 		modify( $claim ) {
 				setTotalClaimPayment( $totalPayment ), 
 				setTotalMedicareReimbursement( $totalReimbursement ), 
 				setTotalClaimCoinsurance( $totalCoinsurance )
 		}
-		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName());
 end
