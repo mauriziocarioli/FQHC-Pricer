@@ -11,6 +11,7 @@ rule "Total Claim Payment"
 		$totalPayment : Double( ) from accumulate ( Line( $linePayment : linePayment != null ),
 			sum($linePayment)) 
 	then
+		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName());
 		modify( $claim ) {
 				setTotalClaimPayment( $totalPayment )
 		}
