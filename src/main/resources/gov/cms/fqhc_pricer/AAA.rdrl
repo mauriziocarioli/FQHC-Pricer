@@ -7,8 +7,8 @@ rule "AAA"
 	salience 0
 	when
 		Claim( )
-		Line( $p : linePayment != null , $a : lineAddonPayment != null , $r : lineMedicareReimbursement != null )
+		Line( $p : linePayment != null , $r : lineMedicareReimbursement != null , $c : lineCoinsurance != null )
 	then
 		System.out.println(">>>>>>>>>>>>>>> AAA fired <<<<<<<<<<<<<<<<");
-		System.out.println(">>>>> "+$p+" "+$a+" "+$r);
+		System.out.println(">>>>> "+$p+" "+$c+" "+$r);
 end
