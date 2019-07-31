@@ -7,14 +7,14 @@ rule "Payment Indicator 13" extends "Service Date is Recent"
 	salience 7
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
-		$line : Line( line == ( $l ) , serviceDate < "01-Jan-2016" , paymentIndicator == "10" )
+		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "13" )
 		$claim : Claim( )
 	then
 		modify( $line ) {
 				setLinePayment( $AF*$baseRate*(1+$addon) ), 
-				setLineCoinsurance( 0.2*$AF*$baseRate*(1+$addon) ), 
-				setLineMedicareReimbursement( 0.8*$AF*$baseRate*(1+$addon) ), 
-				setLineReturnCode( "05" )
+				setLineCoinsurance( 0.038*$AF*$baseRate*(1+$addon) ), 
+				setLineMedicareReimbursement( 0.962*$AF*$baseRate*(1+$addon) ), 
+				setLineAddonPayment( $AF*$baseRate*$addon )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
