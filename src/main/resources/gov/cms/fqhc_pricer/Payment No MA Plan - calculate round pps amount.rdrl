@@ -1,0 +1,18 @@
+package gov.cms.fqhc_pricer;
+
+import java.lang.Number;
+
+rule "Payment No MA Plan - calculate round pps amount" extends "Service Date is Recent"
+	dialect "mvel"
+	salience 6
+	when
+		not (StopProcessing( )) 
+		exists (MAPlan( )) 
+		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
+		$line : Line( line == ( $l ) , paymentIndicator == "13" )
+	then
+		modify( $lh ) {
+				setRoundPpsAmount( $baseRate*$AF*$addon )
+		}
+		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
+end
