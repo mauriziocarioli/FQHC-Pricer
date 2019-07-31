@@ -9,7 +9,7 @@ rule "Payment No MA Plan - pps greater than plan amount" extends "Service Date i
 		not (StopProcessing( )) 
 		exists (NotMAPlan( )) 
 		$claim : Claim( )
-		$lh : LineCalculationHelper( $l : line != null )
+		$lh : LineCalculationHelper( $l : line != null , $ppsAmnt : roundPpsAmount != null )
 		$line : Line( line == ( $l ) , paymentIndicator == "13" )
 	then
 		modify( $line ) {
