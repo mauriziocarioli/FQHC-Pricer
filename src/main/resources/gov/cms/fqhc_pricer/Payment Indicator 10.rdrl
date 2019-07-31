@@ -14,7 +14,7 @@ rule "Payment Indicator 10" extends "Service Date is Recent"
 				setLinePayment( $AF*$baseRate*(1+$addon) ), 
 				setLineCoinsurance( 0.2*$AF*$baseRate*(1+$addon) ), 
 				setLineMedicareReimbursement( 0.8*$AF*$baseRate*(1+$addon) ), 
-				setLineReturnCode( "05" )
+				setLineReturnCode( "03" )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
