@@ -21,6 +21,5 @@ rule "Payment No MA Plan covered charges less than limit - 1" extends "Service D
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
 		}
-		System.out.println("===> FQHC-Pricing: covered charges="+$line.getLinePayment());
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
