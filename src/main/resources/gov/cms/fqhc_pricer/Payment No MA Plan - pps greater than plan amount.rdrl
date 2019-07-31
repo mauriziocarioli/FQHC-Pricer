@@ -7,16 +7,16 @@ rule "Payment No MA Plan - pps greater than plan amount" extends "Service Date i
 	salience 6
 	when
 		not (StopProcessing( )) 
-		exists (MAPlan( )) 
+		exists (NotMAPlan( )) 
 		$claim : Claim( $maPlanAmnt : maPlanAmount != null )
 		$lh : LineCalculationHelper( $l : line != null , $ppsAmnt : roundPpsAmount > ( $maPlanAmnt ) )
 		$line : Line( line == ( $l ) , paymentIndicator == "13" )
 	then
 		modify( $line ) {
-				setLinePayment( $ppsAmnt - $maPlanAmnt ), 
+				setLinePayment( $ppsAmnt ), 
 				setLineCoinsurance( 0.0 ), 
-				setLineReturnCode( "06" ), 
-				setLineMedicareReimbursement( $ppsAmnt - $maPlanAmnt ), 
+				setLineReturnCode( "03" ), 
+				setLineMedicareReimbursement( $ppsAmnt ), 
 				setLineAddonPayment( 0.0 )
 		}
 		modify( $claim ) {
