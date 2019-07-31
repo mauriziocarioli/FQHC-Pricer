@@ -15,8 +15,8 @@ rule "Payment No MA Plan covered charges less than limit - 3" extends "Service D
 		modify( $line ) {
 				setLinePayment( $coveredcharges ), 
 				setLineCoinsurance( 0.2*$coveredcharges ), 
-				setLineReturnCode( "02" ), 
-				setLineMedicareReimbursement( 0.8*$coveredcharges )
+				setLineMedicareReimbursement( 0.8*$coveredcharges ), 
+				setLineReturnCode( "02" )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
