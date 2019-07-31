@@ -7,6 +7,7 @@ rule "Payment - calculate round pps amount" extends "Service Date is Recent"
 	salience 6
 	when
 		not (StopProcessing( )) 
+		exists (MAPlan( )) 
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
 		$line : Line( line == ( $l ) , paymentIndicator == "13" )
 	then
@@ -14,5 +15,4 @@ rule "Payment - calculate round pps amount" extends "Service Date is Recent"
 				setRoundPpsAmount( $baseRate*$AF*$addon )
 		}
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
-		System.out.println("===> FQHC-Pricing: round PPS amount = "+$lh.getRoundPpsAmount()+" for line # "+$l");
 end
