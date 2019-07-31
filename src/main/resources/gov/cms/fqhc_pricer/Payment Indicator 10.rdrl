@@ -7,7 +7,7 @@ rule "Payment Indicator 10" extends "Service Date is Recent"
 	salience 7
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
-		$line : Line( line == ( $l ) , serviceDate < "01-Jan-2016" , paymentIndicator == "10" )
+		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "10" )
 		$claim : Claim( )
 	then
 		modify( $line ) {
