@@ -9,7 +9,7 @@ rule "Payment No MA Plan covered charges less than limit - 3" extends "Service D
 		not (StopProcessing( )) 
 		NotMAPlan( )
 		$lh : LineCalculationHelper( $AF : adjFactor != null , $baseRate : baseRate != null , $l : line != null )
-		$line : Line( $coveredcharges : coveredCharges < ( $AF* $baseRate ) , line == ( $l ) , compositeAdjFlag == "01" , packagingFlag != "6" )
+		$line : Line( $coveredcharges : coveredCharges < ( $AF* $baseRate ) , line == ( $l ) , compositeAdjFlag == "02" , packagingFlag != "6" )
 		$claim : Claim( )
 	then
 		modify( $line ) {
@@ -21,6 +21,5 @@ rule "Payment No MA Plan covered charges less than limit - 3" extends "Service D
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
 		}
-		System.out.println("===> FQHC-Pricing: covered charges="+$line.getLinePayment());
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
