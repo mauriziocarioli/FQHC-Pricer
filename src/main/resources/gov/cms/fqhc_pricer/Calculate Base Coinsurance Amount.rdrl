@@ -11,11 +11,8 @@ rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 		$totalPreventiveCharges : Number( ) from accumulate ( Line( packagingFlag == "06" , $coveredCharges : coveredCharges != null ),
 			sum($coveredCharges)) 
 	then
-		modify( $line ) {
-				setLinePayment( $AF*$baseRate*(1+$addon) )
-		}
 		modify( $lh ) {
-
+				setBaseCoinsuranceAmount( $AF*$baseRate*(1+$addon) - $totalPreventiveCharges )
 		}
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
