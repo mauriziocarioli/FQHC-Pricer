@@ -8,7 +8,6 @@ rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
 		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "13" )
-		$claim : Claim( )
 		$baseCoinsuranceAmount : Number( ) from accumulate ( Line( packagingFlag == "06" , $coveredCharges : coveredCharges != null ),
 			sum($coveredCharges)) 
 	then
@@ -18,9 +17,6 @@ rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 				setLineMedicareReimbursement( $AF*$baseRate*(1+$addon)-0.2*$baseCoinsuranceAmount ), 
 				setLineAddonPayment( $AF*$baseRate*$addon ), 
 				setLineReturnCode( "03" )
-		}
-		modify( $claim ) {
-				setClaimReturnCode( "01" )
 		}
 		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
