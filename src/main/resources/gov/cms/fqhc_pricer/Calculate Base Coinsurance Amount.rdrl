@@ -14,8 +14,8 @@ rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 		modify( $line ) {
 				setLinePayment( $AF*$baseRate*(1+$addon) )
 		}
-		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 		modify( $lh ) {
 
 		}
+		System.out.println("===> FQHC-Pricing: firing rule "+drools.getRule().getName()+" for line # "+$l);
 end
