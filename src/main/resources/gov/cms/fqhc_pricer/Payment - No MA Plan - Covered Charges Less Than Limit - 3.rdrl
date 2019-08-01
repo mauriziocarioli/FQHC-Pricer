@@ -2,21 +2,21 @@ package gov.cms.fqhc_pricer;
 
 import java.lang.Number;
 
-rule "Payment No MA Plan covered charges more than limit - 1" extends "Service Date is Recent"
+rule "Payment - No MA Plan - Covered Charges Less Than Limit - 3" extends "Service Date is Recent"
 	dialect "mvel"
 	salience 5
 	when
 		not (StopProcessing( )) 
 		NotMAPlan( )
 		$lh : LineCalculationHelper( $AF : adjFactor != null , $baseRate : baseRate != null , $l : line != null )
-		$line : Line( $coveredCharges : coveredCharges >= ( $AF* $baseRate ) , line == ( $l ) , packagingFlag != "6" )
+		$line : Line( $coveredcharges : coveredCharges < ( $AF* $baseRate ) , line == ( $l ) , compositeAdjFlag == "02" , packagingFlag != "6" )
 		$claim : Claim( )
 	then
 		modify( $line ) {
-				setLinePayment( $baseRate*$AF ), 
-				setLineCoinsurance( 0.2*$baseRate*$AF ), 
-				setLineMedicareReimbursement( 0.8*$baseRate*$AF ), 
-				setLineReturnCode( "01" )
+				setLinePayment( $coveredcharges ), 
+				setLineCoinsurance( 0.2*$coveredcharges ), 
+				setLineMedicareReimbursement( 0.8*$coveredcharges ), 
+				setLineReturnCode( "02" )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
