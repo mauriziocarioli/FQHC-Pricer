@@ -11,10 +11,10 @@ rule "Payment Indicator 12 - No Additional Payment" extends "Service Date is Rec
 		$claim : Claim( )
 	then
 		modify( $line ) {
-				setLinePayment( $AF*$baseRate ), 
-				setLineCoinsurance( 0.2*$AF*$baseRate ), 
-				setLineMedicareReimbursement( 0.8*$AF*$baseRate ), 
-				setLineReturnCode( "01" )
+				setLinePayment( 0 ), 
+				setLineCoinsurance( 0 ), 
+				setLineMedicareReimbursement( 0 ), 
+				setLineReturnCode( "09" )
 		}
 		modify( $claim ) {
 				setClaimReturnCode( "01" )
