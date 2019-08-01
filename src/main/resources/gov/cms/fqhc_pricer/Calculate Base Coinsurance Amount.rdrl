@@ -8,7 +8,7 @@ rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
 		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "13" )
-		$totalPreventiveCharges : Number( ) from accumulate ( Line( packagingFlag == "06" , $coveredCharges : coveredCharges != null ),
+		$totalPreventiveCharges : Number( ) from accumulate ( Line( packagingFlag == "6" , $coveredCharges : coveredCharges != null ),
 			sum($coveredCharges)) 
 	then
 		modify( $lh ) {
