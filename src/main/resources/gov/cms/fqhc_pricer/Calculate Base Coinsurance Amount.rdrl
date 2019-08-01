@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "Calculate Base Coinsurance Amount" extends "Service Date is Recent"
 	dialect "mvel"
-	salience 5
+	salience 7
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
 		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "13" )
