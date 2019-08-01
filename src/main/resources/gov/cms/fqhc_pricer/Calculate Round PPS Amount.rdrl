@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "Calculate Round PPS Amount" extends "Service Date is Recent"
 	dialect "mvel"
-	salience 6
+	salience 7
 	when
 		not (StopProcessing( )) 
 		exists (MAPlan( )) 

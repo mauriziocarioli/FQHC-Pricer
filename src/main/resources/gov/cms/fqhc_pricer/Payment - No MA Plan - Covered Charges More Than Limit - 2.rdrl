@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "Payment - No MA Plan - Covered Charges More Than Limit - 2" extends "Service Date is Recent"
 	dialect "mvel"
-	salience 5
+	salience 6
 	when
 		not (StopProcessing( )) 
 		NotMAPlan( )

@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "Payment Indicator 12 - No Additional Payment" extends "Service Date is Recent"
 	dialect "mvel"
-	salience 7
+	salience 5
 	when
 		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null )
 		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "12" )
