@@ -2,7 +2,7 @@ package gov.cms.fqhc_pricer;
 
 import java.lang.Number;
 
-rule "Payment Indicator 13 - Paid Line" extends "Service Date is Recent"
+rule "Payment Indicator 13 - Paid With Add On" extends "Service Date is Recent"
 	dialect "mvel"
 	salience 5
 	when
