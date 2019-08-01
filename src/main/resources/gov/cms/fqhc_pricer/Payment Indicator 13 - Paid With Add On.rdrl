@@ -6,16 +6,14 @@ rule "Payment Indicator 13 - Paid With Add On" extends "Service Date is Recent"
 	dialect "mvel"
 	salience 5
 	when
-		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null )
+		$lh : LineCalculationHelper( $l : line != null , $baseRate : baseRate != null , $AF : adjFactor != null , $addon : addonFactor != null , $baseCoinsuranceAmount : baseCoinsuranceAmount != null )
 		$line : Line( line == ( $l ) , serviceDate >= "01-Jan-2016" , paymentIndicator == "13" )
 		$claim : Claim( )
-		$baseCoinsuranceAmount : Number( ) from accumulate ( Line( packagingFlag == "06" , $coveredCharges : coveredCharges != null ),
-			sum($coveredCharges)) 
 	then
 		modify( $line ) {
-				setLinePayment( $AF*$baseRate*(1+$addon) ), 
+				setLinePayment( $AF*$baseRate*(1 + $addon) ), 
 				setLineCoinsurance( 0.2*$baseCoinsuranceAmount ), 
-				setLineMedicareReimbursement( $AF*$baseRate*(1+$addon)-0.2*$baseCoinsuranceAmount ), 
+				setLineMedicareReimbursement( $AF*$baseRate*(1 + $addon) - 0.2*$baseCoinsuranceAmount ), 
 				setLineAddonPayment( $AF*$baseRate*$addon ), 
 				setLineReturnCode( "03" )
 		}
